@@ -1,0 +1,17 @@
+services:
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8081:80"
+
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+
+  database:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: appdb
